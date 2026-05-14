@@ -3,11 +3,11 @@ import { Link } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Nishat — Web Developer Portfolio" },
+    { title: "Noureen's Portfolio" },
     {
-      name: "description",
+      name: "Nahian Noureen",
       content:
-        "Professional portfolio of Nishat — a passionate web developer creating beautiful, user-centric digital experiences.",
+        "Portfolio of Nishat, a passionate web developer creating beautiful, user centric digital experiences.",
     },
   ];
 }
@@ -23,7 +23,6 @@ export default function Home() {
   );
 }
 
-/* ========== HERO SECTION ========== */
 function HeroSection() {
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden px-6">
@@ -32,7 +31,6 @@ function HeroSection() {
       <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full opacity-50 pointer-events-none bg-violet-400/10 blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
       <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full opacity-40 pointer-events-none bg-fuchsia-400/10 blur-3xl animate-pulse" style={{ animationDelay: "4s" }} />
 
-      {/* Decorative sparkles */}
       <div className="absolute top-20 right-1/4 animate-bounce">
         <span className="text-2xl opacity-30 text-rose-400">✦</span>
       </div>
@@ -64,7 +62,6 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Status Badge */}
         <div className="mb-8">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-rose-500/8 border border-rose-500/15 text-rose-600">
             <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
@@ -72,12 +69,10 @@ function HeroSection() {
           </span>
         </div>
 
-        {/* Greeting */}
         <p className="text-lg md:text-xl text-gray-500 font-medium mb-4">
           Hello, I'm
         </p>
 
-        {/* Name */}
         <h1
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight bg-gradient-to-r from-rose-500 via-fuchsia-500 to-violet-500 bg-clip-text text-transparent"
           style={{ fontFamily: "'Playfair Display', serif" }}
@@ -90,14 +85,12 @@ function HeroSection() {
           Web Developer & UI Enthusiast
         </p>
 
-        {/* Description */}
         <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
           A passionate final-year undergraduate crafting beautiful, accessible, and
           user-centric web experiences. I blend creativity with code to bring ideas
           to life — from pixel-perfect interfaces to robust backend systems.
         </p>
 
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             to="/projects"
@@ -125,7 +118,6 @@ function HeroSection() {
           </a>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="mt-16">
           <div className="flex flex-col items-center gap-2 text-gray-400">
             <span className="text-xs font-medium tracking-wider uppercase">Scroll to explore</span>
@@ -142,7 +134,6 @@ function HeroSection() {
   );
 }
 
-/* ========== SKILLS SHOWCASE ========== */
 function SkillsShowcase() {
   const skillCategories = [
     {
@@ -216,7 +207,6 @@ function SkillsShowcase() {
   );
 }
 
-/* ========== FEATURED PROJECTS ========== */
 function FeaturedProjects() {
   const projects = [
     {
@@ -305,7 +295,6 @@ function FeaturedProjects() {
           ))}
         </div>
 
-        {/* View All */}
         <div className="text-center mt-12">
           <Link
             to="/projects"
@@ -323,7 +312,6 @@ function FeaturedProjects() {
   );
 }
 
-/* ========== CONTACT CTA ========== */
 function ContactCTA() {
   return (
     <section id="contact" className="py-24 px-6">
