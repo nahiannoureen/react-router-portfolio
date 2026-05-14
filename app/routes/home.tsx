@@ -26,7 +26,6 @@ export default function Home() {
 function HeroSection() {
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden px-6">
-      {/* Decorative Background Blobs */}
       <div className="absolute top-10 left-10 w-72 h-72 rounded-full opacity-60 pointer-events-none bg-rose-400/10 blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full opacity-50 pointer-events-none bg-violet-400/10 blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
       <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full opacity-40 pointer-events-none bg-fuchsia-400/10 blur-3xl animate-pulse" style={{ animationDelay: "4s" }} />
@@ -42,7 +41,6 @@ function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Profile Image */}
         <div className="mb-8 flex justify-center">
           <div className="relative">
             <div className="w-36 h-36 md:w-44 md:h-44 rounded-full p-1 bg-gradient-to-br from-rose-400 via-fuchsia-400 to-violet-400 shadow-xl shadow-rose-500/20">
@@ -52,7 +50,6 @@ function HeroSection() {
                 className="w-full h-full rounded-full object-cover border-4 border-white"
               />
             </div>
-            {/* Floating decorations */}
             <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full flex items-center justify-center bg-white shadow-lg border border-rose-100 animate-bounce text-sm">
               💜
             </div>
@@ -80,7 +77,6 @@ function HeroSection() {
           Nishat
         </h1>
 
-        {/* Title */}
         <p className="text-xl md:text-2xl font-semibold mb-6 text-purple-800">
           Web Developer & UI Enthusiast
         </p>
@@ -228,7 +224,6 @@ function FeaturedProjects() {
   return (
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-rose-500/8 text-rose-600 border border-rose-500/12">
             Portfolio
@@ -243,15 +238,12 @@ function FeaturedProjects() {
             A selection of projects that showcase my skills and passion.
           </p>
         </div>
-
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.title}
               className="group rounded-2xl overflow-hidden bg-white/80 backdrop-blur-xl border border-rose-100/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-rose-500/10"
             >
-              {/* Gradient Banner */}
               <div className={`h-3 w-full ${project.gradientClass}`} />
 
               <div className="p-8">
