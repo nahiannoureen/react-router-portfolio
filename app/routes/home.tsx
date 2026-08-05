@@ -272,11 +272,11 @@ function FeaturedProjects() {
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-emerald-500/8 text-emerald-600 border border-emerald-500/12">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-emerald-500/8 text-teal-700 border border-emerald-500/12">
             Portfolio
           </span>
           <h2
-            className="text-3xl md:text-4xl font-bold mb-4 text-stone-900"
+            className="text-3xl md:text-4xl font-bold mb-4 text-teal-900"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Featured Projects

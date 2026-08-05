@@ -90,7 +90,7 @@ export default function Projects() {
                 </span>
 
                 <h2
-                  className="text-2xl font-bold mb-3 text-purple-900"
+                  className="text-2xl font-bold mb-3 text-stone-900"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {project.title}
