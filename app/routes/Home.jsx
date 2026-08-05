@@ -8,7 +8,7 @@ export default function Home() {
       <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg mb-6 border-4 border-indigo-100">
         {/* Replace src with your actual profile photo */}
         <img
-          src="../../public/pro-pic-nishat.jpg"
+          src="../../public/pro-pic-noureen.jpg"
           alt="Profile"
           className="w-full h-full object-cover"
         />

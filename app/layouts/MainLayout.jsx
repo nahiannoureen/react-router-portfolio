@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function MainLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-pink-50 via-fuchsia-50 to-violet-50">
+    <div className="min-h-screen flex flex-col bg-stone-50 text-stone-900">
       <NavigationBar />
       <main className="flex-1">
         <Outlet />
@@ -23,22 +23,31 @@ function NavigationBar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/60 backdrop-blur-xl border-b border-pink-100/50 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-stone-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2.5 group">
-          <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-rose-500 via-fuchsia-500 to-violet-500 shadow-lg shadow-rose-500/30">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-teal-600 to-emerald-500 shadow-lg shadow-teal-500/20">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M12 2L2 7l10 5 10-5-10-5z" />
               <path d="M2 17l10 5 10-5" />
               <path d="M2 12l10 5 10-5" />
             </svg>
           </span>
           <span
-            className="text-xl font-bold tracking-tight bg-gradient-to-r from-rose-500 to-fuchsia-500 bg-clip-text text-transparent"
+            className="text-xl font-bold tracking-tight bg-gradient-to-r from-teal-700 to-emerald-500 bg-clip-text text-transparent"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Nishat
+            Noureen
           </span>
         </NavLink>
 
@@ -52,8 +61,8 @@ function NavigationBar() {
               className={({ isActive }) =>
                 `px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   isActive
-                    ? "bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white shadow-md shadow-rose-500/30"
-                    : "text-gray-600 hover:text-rose-500 hover:bg-rose-50/60"
+                    ? "bg-teal-700 text-white shadow-md shadow-cyan-500/30"
+                    : "text-gray-600 hover:text-cyan-400 hover:bg-slate-800/60"
                 }`
               }
             >
@@ -64,10 +73,19 @@ function NavigationBar() {
 
         {/* Contact Button */}
         <a
-          href="mailto:nishat@example.com"
-          className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-rose-500 to-fuchsia-500 shadow-lg shadow-rose-500/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-rose-500/30"
+          href="mailto:noureen@example.com"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-teal-600 to-emerald-500 shadow-lg shadow-teal-500/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-teal-500/30"
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <rect width="20" height="16" x="2" y="4" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
           </svg>
@@ -81,12 +99,30 @@ function NavigationBar() {
           aria-label="Toggle menu"
         >
           {isOpen ? (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="18" y1="6" x2="6" y2="18" />
               <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           ) : (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="4" y1="8" x2="20" y2="8" />
               <line x1="4" y1="16" x2="20" y2="16" />
             </svg>
@@ -100,7 +136,7 @@ function NavigationBar() {
           isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 py-4 space-y-2 border-t border-rose-100/50">
+        <div className="px-6 py-4 space-y-2 border-t border-slate-800/50">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
@@ -110,8 +146,8 @@ function NavigationBar() {
               className={({ isActive }) =>
                 `block px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
                   isActive
-                    ? "bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white"
-                    : "text-gray-600 hover:text-rose-500 hover:bg-rose-50/60"
+                    ? "bg-gradient-to-r from-teal-600 to-emerald-500 text-white shadow-md shadow-cyan-500/30"
+                    : "text-stone-600 hover:text-teal-700 hover:bg-stone-100"
                 }`
               }
             >
@@ -119,8 +155,9 @@ function NavigationBar() {
             </NavLink>
           ))}
           <a
-            href="mailto:nishat@example.com"
-            className="block px-4 py-3 rounded-xl text-sm font-semibold text-white text-center mt-2 bg-gradient-to-r from-rose-500 to-fuchsia-500"
+            href="mailto:noureen@example.com"
+            className="block px-4 py-3 rounded-xl text-sm font-semibold text-white text-center mt-2 bg-teal-700 hover:bg-teal-800
+"
           >
             ✉️ Say Hello
           </a>
@@ -164,18 +201,18 @@ function Footer() {
   ];
 
   return (
-    <footer className="mt-auto bg-gradient-to-br from-purple-900 via-fuchsia-900 to-purple-950 border-t-4 border-transparent" style={{ borderImage: "linear-gradient(90deg, #f43f5e, #d946ef, #8b5cf6, #d946ef, #f43f5e) 1" }}>
+    <footer className="mt-auto bg-white border-t border-stone-200">
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           {/* Brand */}
           <div className="text-center md:text-left">
             <h3
-              className="text-2xl font-bold mb-2 bg-gradient-to-r from-rose-300 to-fuchsia-300 bg-clip-text text-transparent"
+              className="text-2xl font-bold mb-2 bg-gradient-to-r from-teal-700 to-emerald-500 bg-clip-text text-transparent"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Nishat
+              Noureen
             </h3>
-            <p className="text-sm text-rose-200/70">
+            <p className="text-sm text-stone-500">
               Crafting beautiful digital experiences ✨
             </p>
           </div>
@@ -183,9 +220,24 @@ function Footer() {
           {/* Quick Links */}
           <div className="text-center">
             <div className="flex justify-center gap-6">
-              <NavLink to="/" className="text-sm text-rose-200/80 hover:text-rose-300 transition-colors duration-300">Home</NavLink>
-              <NavLink to="/about" className="text-sm text-rose-200/80 hover:text-rose-300 transition-colors duration-300">About</NavLink>
-              <NavLink to="/projects" className="text-sm text-rose-200/80 hover:text-rose-300 transition-colors duration-300">Projects</NavLink>
+              <NavLink
+                to="/"
+                className="text-sm text-stone-500 hover:text-teal-700 transition-colors duration-300"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="text-sm text-stone-500 hover:text-teal-700 transition-colors duration-300"
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/projects"
+                className="text-sm text-stone-500 hover:text-teal-700 transition-colors duration-300"
+              >
+                Projects
+              </NavLink>
             </div>
           </div>
 
@@ -198,7 +250,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="w-10 h-10 rounded-full flex items-center justify-center text-rose-200/80 bg-white/10 border border-white/10 transition-all duration-300 hover:scale-110 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-fuchsia-500 hover:shadow-lg hover:shadow-rose-500/40 hover:border-transparent"
+                className="w-10 h-10 rounded-full flex items-center justify-center text-stone-500 bg-stone-100 border border-stone-200 transition-all duration-300 hover:scale-110 hover:bg-teal-700 hover:text-white hover:bg-cyan-500 hover:shadow-lg hover:shadow-rose-500/40 hover:border-transparent"
               >
                 {social.icon}
               </a>
@@ -207,9 +259,10 @@ function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-8 pt-6 text-center border-t border-white/10">
-          <p className="text-xs text-rose-200/50">
-            © {currentYear} Nishat. Designed with <span className="text-rose-400">♥</span> — All rights reserved.
+        <div className="mt-8 pt-6 text-center border-t border-stone-200">
+          <p className="text-xs text-stone-500">
+            © {currentYear} Noureen. Designed with{" "}
+            <span className="text-teal-700">♥</span> — All rights reserved.
           </p>
         </div>
       </div>

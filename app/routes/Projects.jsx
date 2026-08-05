@@ -23,7 +23,7 @@ export default function Projects() {
 
   return (
     <div>
-      <h2 className="text-4xl font-bold text-gray-900 mb-8 border-b-4 border-indigo-600 inline-block pb-2">
+      <h2 className="text-4xl font-bold text-stone-900 mb-8 border-b-4 border-teal-700 inline-block pb-2">
         Selected Projects
       </h2>
 
@@ -31,20 +31,20 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 flex flex-col"
+            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-emerald-100 flex flex-col"
           >
             <div className="p-6 flex-grow">
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">
+              <h3 className="text-2xl font-bold text-stone-800 mb-3">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-stone-600 mb-6 leading-relaxed">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-semibold"
+                    className="bg-emerald-50 text-emerald-800 border border-emerald-100 px-3 py-1 rounded-full text-xs font-semibold"
                   >
                     {tech}
                   </span>
@@ -52,16 +52,16 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="bg-gray-50 px-6 py-4 border-t border-gray-100 flex gap-4">
+            <div className="bg-stone-50 px-6 py-4 border-t border-emerald-100 flex gap-4">
               <a
                 href={project.github}
-                className="text-gray-600 hover:text-indigo-600 flex items-center gap-2 text-sm font-medium transition-colors"
+                className="text-stone-600 hover:text-teal-700 flex items-center gap-2 text-sm font-medium transition-colors"
               >
                 <Github size={16} /> Code
               </a>
               <a
                 href={project.live}
-                className="text-gray-600 hover:text-indigo-600 flex items-center gap-2 text-sm font-medium transition-colors"
+                className="text-stone-600 hover:text-teal-700 flex items-center gap-2 text-sm font-medium transition-colors"
               >
                 <ExternalLink size={16} /> Live Demo
               </a>
